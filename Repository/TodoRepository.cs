@@ -24,5 +24,17 @@ namespace ApiTodo.Repository
         {
             return _db.Todos.FirstOrDefault(t => t.idTask == id);
         }
+
+        public bool PostTask(Tasks task)
+        {
+            _db.Todos.Add(task);
+                        
+            return _db.SaveChanges() > 0 ? true : false;
+        }
+
+        public bool SaveTask()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

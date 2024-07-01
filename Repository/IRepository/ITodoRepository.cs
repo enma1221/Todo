@@ -7,5 +7,8 @@ namespace ApiTodo.Repository.IRepository
     {
         ICollection<Tasks> GetTasks();
         Tasks OneTask(int id);
+
+        bool PostTask(Tasks task);   
+
     }
 }
